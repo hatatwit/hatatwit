@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ANIMEJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Cormorant:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet" />
+
+    <!-- SCROLL REVEAL ANIMATIONS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css" />
+    <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+
+    <!-- SIMPLE PARALLAX -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+    
+    <!-- EMAILJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- SEND EMAIL -->
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("7HPI6_nLiQW8fioVW");
+        })();
+
+        function sendEmail() {
+            emailjs.send("service_0alilqg", "template_cbdfsz3", {
+                name: document.getElementById('name').value,
+                message: document.getElementById('message').value,
+                email: document.getElementById('email').value,
+            })
+                .then(function (response) {
+                    console.log("SUCCESS", response);
+                    alert("Email sent successfully!");
+                }, function (error) {
+                    console.log("FAILED", error);
+                    alert("Failed to send email. Please try again later.");
+                });
+
+            return false; // To prevent the form from submitting
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <!-- HERO SECTION -->
+    <a name="home"></a>
+    <div class="wrapper">
+        <section class="hero-section">
+            <!-- LOGO -->
+            <div class="hero-logo">
+                <a href="index.html">TH</a>
+            </div>
+
+            <!-- TOGGLE BUTTON -->
+            <div class="menu-toggle">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+
+            <!-- SOCIAL MEDIA ICONS -->
+            <div class="media">
+                <ul>
+                    <li>
+                        <a href="https://github.com/hatatwit"><ion-icon name="logo-github"></ion-icon></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/trangh-wit/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@spunkie_thebun"><ion-icon name="logo-youtube"></ion-icon></a>
+                    </li>
+                    <li>
+                        <a href="/images/TrangH-Resume.pdf"><ion-icon name="document-attach-outline"></ion-icon></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- VIEW PHOTOS LINK -->
+            <div class="view-photos">
+                <ul>
+                    <li>Scroll down</li>
+                    <li><ion-icon name="arrow-back-outline"></ion-icon></li>
+                </ul>
+
+            </div>
+
+            <!-- HERO-IMAGE -->
+            <div class="hero-img">
+                <img src="images/hero-img.jpg" class="hero-img-parallax" />
+            </div>
+
+            <!-- HERO-TITLE -->
+            <div class="hero-title">
+                <h1>Trang Ha</h1>
+            </div>
+            <div class="overlay">
+                <div class="close-btn">
+                    <ion-icon name="close"></ion-icon>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#work">Work</a>
+                        </li>
+                        <li>
+                            <a href="#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <a name="about"></a>
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="about-heading col-lg-6">
+                        <h1 class="wow fadeInUp" data-wow-delay="0.2s">About</h1>
+                    </div>
+                    <div class="about-content col-lg-6">
+                        <h3 class="wow fadeInUp" data-wow-delay="0.3s">
+                            I'm a recent graduate from Wentworth Institute of Technology , where I earned a bachelor's
+                            degree in Computer Science with a minor in Computer Networking in 2022.
+                        </h3>
+                        <p class="wow fadeInUp" data-wow-delay="0.4s">
+                            Throughout my academic journey, I have always been passionate about designing and building
+                            visually appealing
+                            websites that are also highly functional. I have successfully completed multiple projects,
+                            showcasing clean and modern
+                            front-end designs paired with efficient backend development. <br><br> In addition to my
+                            technical
+                            skills, I have gained valuable experience working both independently and in teams, which has
+                            greatly
+                            enhanced my communication and collaboration abilities.
+                        </p>
+                        <p class="wow fadeInUp" data-wow-delay="0.5s">
+                            I am currently seeking new opportunities and open to exciting projects where I can
+                            contribute my
+                            expertise. Let's connect and collaborate!
+                        </p>
+                        <div class="about-link wow fadeInUp" data-wow-delay="0.8s">
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <a name="skills"></a>
+        <section class="skills-section">
+            <div class="container">
+                <h1 class="wow fadeInUp" data-wow-delay="0.2s">Skills</h1>
+                <p class="wow fadeInUp" data-wow-delay="0.4s">
+                    Here are some of the technologies I have been worked with.
+                </p>
+                <div class="skills-lists">
+                    <div class="list">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li class="proficient">Python</li>
+                            <li class="good">JavaScript</li>
+                            <li class="proficient">HTML</li>
+                            <li class="proficient">CSS</li>
+                            <li class="intermediate">SASS</li>
+                            <li class="good">Java</li>
+                            <li class="good">SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="list">
+                        <h3>Web Technologies</h3>
+                        <ul>
+                            <li class="proficient">ReactJS</li>
+                            <li class="proficient">Django</li>
+                            <li class="intermediate">Flask</li>
+                            <li class="proficient">FastAPI</li>
+                            <li class="good">NodeJS</li>
+                            <li class="good">ExpressJS</li>
+                            <li class="good">jQuery</li>
+                            <li class="intermediate">REST APIs</li>
+                            <li class="proficient">Git</li>
+                        </ul>
+                    </div>
+
+                    <div class="list">
+                        <h3>Software</h3>
+                        <ul>
+                            <li>VSCode</li>
+                            <li>PyCharm</li>
+                            <li>WebStorm</li>
+                            <li>IntelliJ IDEA</li>
+                            <li>Android Studio</li>
+                            <li>Eclipse</li>
+                        </ul>
+                    </div>
+
+                    <div class="list">
+                        <h3>Cloud & Databases</h3>
+                        <ul>
+                            <li class="intermediate">Firebase</li>
+                            <li class="good">GCP</li>
+                            <li class="intermediate">Heroku</li>
+                            <li class="proficient">Mongo DB</li>
+                            <li class="proficient">PostgreSQL</li>
+                            <li class="intermediate">MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills-tables">
+                    <table>
+                        <tr>
+                          <th>Languages</th>
+                          <td>Python, JavaScript, HTML, CSS, SASS, Java, SQL</td>
+                        </tr>
+                        <tr>
+                          <th>Web Technologies</th>
+                          <td>ReactJS, Django, Flask, FastAPI, NodeJS, ExpressJS, jQuery, REST APIs, Git</td>
+                        </tr>
+                        <tr>
+                          <th>Software</th>
+                          <td>VSCode, PyCharm, WebStorm, IntelliJ IDEA, Android Studio, Eclipse</td>
+                        </tr>
+                        <tr>
+                          <th>Cloud & Databases</th>
+                          <td>Firebase, GCP, Heroku, Mongo DB, PostgreSQL, MySQL</td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK SECTION -->
+        <a name="work"></a>
+        <section class="work-section">
+            <div class="container">
+                <div class="row">
+                    <div class="work-heading col-lg-6">
+                        <h1 class="wow fadeInUp" data-wow-delay="0.2s">Work</h1>
+                    </div>
+                </div>
+
+                <div class="row job-list wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-md-4">
+                        <p>July 2021 - August 2022</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Library Student Assistance | Part-time</h5>
+                        <span class="location"><ion-icon name="location-outline"></ion-icon> Wentworth Institute of
+                            Technology - Boston, MA</span><br>
+                        <p>Provided circulation service to members of Wentworth community and answered questions about
+                            library services, materials, and spaces.</p>
+                    </div>
+                </div>
+                <div class="row job-list wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-md-4">
+                        <p>Sept. 2021 - Dec. 2021</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Future Lab Innovation Fellow | CO-OP</h5>
+                        <span class="location"><ion-icon name="location-outline"></ion-icon> Wentworth Institute of
+                            Technology - Boston, MA</span><br>
+                        <p>Collaborated with teammates to build a web app that helps users to find ethical and green
+                            products based on scientific rating systems by scanning or browsing product
+                            barcodes.<br>Developed front-end and back-end of Conserve 2 Preserve project using Django,
+                            Python, SQL, and Barcode Lookup API.</p>
+                    </div>
+                </div>
+                <div class="row job-list wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="col-md-4">
+                        <p>Jan. 2021 - April 2021</p>
+                    </div>
+                    <div class="col-md-8">
+                        <h5>Website Designer and Developer | CO-OP</h5>
+                        <span class="location"><ion-icon name="location-outline"></ion-icon> Wentworth Institute of
+                            Technology - Boston, MA</span><br>
+                        <p>Created a website that allows users to store and share files with multiple users, get updated
+                            on announcements and schedule events.<br>Programmed front-end and back-end of the Bullet
+                            Board project using Django, Python, Firebase, and Google Cloud Platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <a name="projects"></a>
+        <section class="project-section">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="arrow-down">
+                                <ion-icon name="arrow-down" class="wow fadeInUp" data-wow-delay="0.2s"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="project-heading col-lg-6">
+                            <h1 class="wow fadeInUp" data-wow-delay="0.3s">Projects</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s">
+                                Here are some of selected projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- PROJECT DETAIL SECTION -->
+                <div class="main-text project-scroll">
+                    <!-- MISSHA E-SHOP -->
+                    <div class="project">
+                        <div class="project-image">
+                            <div id="missha-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/missha-eshop/missha-teaser.gif" alt="missha-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <iframe width="100%" height="410" src="https://www.youtube.com/embed/XarTvqkbI4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/missha-eshop/missha (1).png" alt="missha-img-(1)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/missha-eshop/missha (2).png" alt="missha-img-(2)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/missha-eshop/missha (3).png" alt="missha-img-(3)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/missha-eshop/missha (4).png" alt="missha-img-(4)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/missha-eshop/missha (5).png" alt="missha-img-(5)">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#missha-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#missha-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">Missha EShop</h3>
+                            <p>An e-commerce clothing website that offers a wide range of trendy and fashionable clothing options for men and women.</p>
+                            <ul class="project-tags">
+                                <li>ReactJS</li>
+                                <li>React Router</li>
+                                <li>Redux</li>
+                                <li>Stripe</li>
+                                <li>Strapi</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Sass</li>
+                                <li>Netlify</li>
+                                <li>Railway</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://missha.netlify.app/" target="_blank" rel="noopener">Demo</a>
+                                <a href="https://github.com/hatatwit/missha-eshop" target="_blank" rel="noopener">Source
+                                    Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PHO DELI -->
+                    <div class="project">
+                        <div class="project-image">
+                            <div id="phodeli-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/phoDeli/phoDeli-teaser.gif" alt="phoDeli-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/phoDeli/phoDeli (1).png" alt="phoDeli-img-(1)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/phoDeli/phoDeli (2).png" alt="phoDeli-img-(2)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/phoDeli/phoDeli (3).png" alt="phoDeli-img-(3)">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#phodeli-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#phodeli-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">Pho Deli</h3>
+                            <p>A website for a friendly neighborhood Vietnamese and Thai food restaurant.</p>
+                            <ul class="project-tags">
+                                <li>ReactJS</li>
+                                <li>React Scroll</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Netlify</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://phodeli.netlify.app/" target="_blank" rel="noopener">Demo</a>
+                                <a href="https://github.com/hatatwit/pho-deli" target="_blank" rel="noopener">Source
+                                    Code</a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- BUNNY EXPERT -->
+                     <div class="project">
+                        <div class="project-image">
+                            <div id="bunnyExpert-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/bunnyExpert/bunnyExpert-teaser.gif" alt="bunnyExpert-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <iframe width="100%" height="410" src="https://www.youtube.com/embed/nGf2rFn8QaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#bunnyExpert-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#bunnyExpert-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">Bunny Expert</h3>
+                            <p>A website that allows users to look up safe and unsafe foods for rabbits and predict rabbit illnesses based on their symptoms aims to help rabbit owners take better care of their pet rabbits.</p>
+                            <ul class="project-tags">
+                                <li>ReactJS</li>
+                                <li>React Router</li>
+                                <li>Context</li>
+                                <li>EmailJS</li>
+                                <li>BunnyFood API</li>
+                                <li>BunnyDiseases API</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Sass</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://bunnyexpert.netlify.app/" target="_blank" rel="noopener">Demo</a>
+                                <a href="https://github.com/hatatwit/bunny-expert" target="_blank" rel="noopener">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SPUNKIE LINKTREE -->
+                    <div class="project">
+                        <div class="project-image">
+                            <div id="linktree-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/linktree/spunkieLinktree-teaser.gif" alt="linktree-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/linktree/linktree (1).png" alt="linktree-img-(1)">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#linktree-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#linktree-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">Spunkie Linktree</h3>
+                            <p>A landing page in @spunkie_thebun's Instagram bio contains multiple links to other social media.</p>
+                            <ul class="project-tags">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://hatatwit.github.io/spunkieLinkTree/" target="_blank" rel="noopener">Demo</a>
+                                <a href="https://github.com/hatatwit/spunkieLinkTree" target="_blank" rel="noopener">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CONVOY COMS -->
+                    <div class="project">
+                        <div class="project-image">
+                            <div id="convoyComs-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/convoyComs/convoyComs-teaser.gif" alt="convoyComs-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/convoyComs/ConvoyComs(1).png" alt="ConvoyComs-img-(1)">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#convoyComs-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#convoyComs-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">Convoy Coms</h3>
+                            <p>Developed a cross-platform mobile app that connects nearby Bluetooth devices and establishes a group call when there is no service.</p>
+                            <ul class="project-tags">
+                                <li>React Native</li>
+                                <li>react-native-ble-plx</li>
+                                <li>Expo</li>
+                                <li>Java</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/hatatwit/ConvoyComs" target="_blank" rel="noopener">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TRJ MONITORING -->
+                    <div class="project">
+                        <div class="project-image">
+                            <div id="trj-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/TRJ/trjMonitoring-teaser.gif" alt="trj-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/TRJ/TRJ(1).png" alt="trj-img-(1)">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#trj-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#trj-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">TRJ Monitoring</h3>
+                            <p>Built a network monitoring solution that can be used to alert users about outages and remotely manage system functionalities.</p>
+                            <ul class="project-tags">
+                                <li>Python</li>
+                                <li>Flask</li>
+                                <li>Twilio API</li>
+                                <li>Bootstrap</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/hatatwit/TRJ-Monitoring-Solution" target="_blank" rel="noopener">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CONSERVE 2 PRESERVE -->
+                    <div class="project">
+                        <div class="project-image">
+                            <div id="c2p-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/conserve2preserve/c2p-teaser.gif" alt="c2p-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <iframe width="100%" height="410" src="https://www.youtube.com/embed/vG24e2BjC68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/conserve2preserve/c2p (1).png" alt="c2p-img-(1)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/conserve2preserve/c2p (2).png" alt="c2p-img-(2)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/conserve2preserve/c2p (3).png" alt="c2p-img-(3)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/conserve2preserve/c2p (4).png" alt="c2p-img-(4)">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#c2p-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#c2p-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">Conserve 2 Preserve</h3>
+                            <p>A web app helps users to find ethical and green products based on our scientific ratings by scanning or browsing product barcodes.</p>
+                            <ul class="project-tags">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>SQLite</li>
+                                <li>UPC Lookup API</li>
+                                <li>Logo API</li>
+                                <li>HTML</li>
+                                <li>Bootstrap</li>
+                                <li>CSS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/hatatwit/conserve2preserve" target="_blank" rel="noopener">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BULLET BOARD -->
+                    <div class="project">
+                        <div class="project-image">
+                            <div id="bulletBoard-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/bulletBoard/bulletBoard-teaser.gif" alt="bulletBoard-teaser">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/bulletBoard/bulletBoard (1).png" alt="bulletBoard-img-(1)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/bulletBoard/bulletBoard (2).png" alt="bulletBoard-img-(2)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/bulletBoard/bulletBoard (3).png" alt="bulletBoard-img-(3)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/bulletBoard/bulletBoard (4).png" alt="bulletBoard-img-(4)">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/bulletBoard/bulletBoard (5).png" alt="bulletBoard-img-(5)">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#bulletBoard-carousel" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#bulletBoard-carousel" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-text">
+                            <h3 class="project-title">Bullet Board</h3>
+                            <p>A website allows users to store and share files with multiple users, get updated on announcements and schedule events.</p>
+                            <ul class="project-tags">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>Firebase</li>
+                                <li>GCP</li>
+                                <li>Dockerfile</li>
+                                <li>HTML</li>
+                                <li>Bootstrap</li>
+                                <li>CSS</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/hatatwit/firebase-django" target="_blank" rel="noopener">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- CONTACT SECTION -->
+    <a name="contact"></a>
+      <section class="social-media">
+        <div class="container">
+          <div class="row">
+            <div class="sm-heading col-lg-6">
+              <h1 class="wow fadeInUp" data-wow-delay="0.2s">Contact</h1>
+            </div>
+            <div class="sm-content col-lg-6">
+                <!-- CONTACT FORM -->
+                <form onsubmit="return sendEmail()">
+                    <input type="text" id="name" name="name" placeholder="Your name" class="wow fadeInUp" data-wow-delay="0.4s"
+                        required>
+                    <input type="email" id="email" name="email" placeholder="Your email" class="wow fadeInUp" data-wow-delay="0.5s"
+                        required>
+                    <textarea id="message" name="message" placeholder="Write your message here" class="wow fadeInUp"
+                        data-wow-delay="0.6s" required></textarea>
+                    <input type="submit" value="Send Email" class="wow fadeInUp" data-wow-delay="0.7s">
+                </form>
+            </div>
+          </div>
+          <div class="col-lg-12 text-left">
+            <div class="social-icons">
+                <!-- SOCIAL MEDIA -->
+              <ul>
+                <li>
+                    <a href="https://github.com/hatatwit"><ion-icon name="logo-github"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/trangh-wit/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@spunkie_thebun"><ion-icon name="logo-youtube"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="/images/TrangH-Resume.pdf"><ion-icon name="document-attach-outline"></ion-icon></a>
+                </li>
+                <li>
+                    <a href = "mailto: hattatsg@gmail.com"><ion-icon name="mail-outline"></ion-icon></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+
+    <script>
+        new WOW().init();
+
+        var textWrapper = document.querySelector(".hero-title");
+        textWrapper.innerHTML = textWrapper.textContent.replace(
+            /\S/g,
+            "<span class='letter'>$&</span>"
+        );
+        $(document).ready(function () {
+            anime.timeline({ loop: false }).add({
+                targets: ".hero-title .letter",
+                translateY: [120, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 2000 + 40 * i
+            });
+        });
+
+        var t1 = new TimelineMax({ paused: true });
+
+        TweenMax.from(".hero-logo", 2, {
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+            delay: 0.2
+        });
+
+        TweenMax.from(".menu-toggle", 2, {
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+            delay: 0.4
+        });
+
+        TweenMax.from(".view-photos", 2, {
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut,
+            delay: 0.6
+        });
+
+        TweenMax.staggerFrom(
+            ".media ul li",
+            2,
+            {
+                y: 20,
+                opacity: 0,
+                ease: Expo.easeInOut,
+                delay: 0.8
+            },
+            0.1
+        );
+
+        t1.to(".overlay", 1, {
+            opacity: 1,
+            ease: Expo.easeInOut
+        });
+
+        t1.to(".view-photos, .media", 1, {
+            opacity: 0,
+            ease: Expo.easeInOut
+        });
+
+        t1.staggerFrom(
+            ".menu ul li",
+            1,
+            { y: 100, opacity: 0, ease: Expo.easeOut },
+            0.1
+        );
+
+        t1.reverse();
+        $(document).on("click", ".menu-toggle", function () {
+            t1.reversed(!t1.reversed());
+        });
+
+        $(document).on("click", ".close-btn", function () {
+            t1.reversed(!t1.reversed());
+        });
+
+        t1.reverse();
+        $(document).on("click", "li", function () {
+            t1.reversed(!t1.reversed());
+        });
+
+        var image = document.getElementsByClassName("hero-img-parallax");
+        new simpleParallax(image, {
+            scale: 0.75
+        });
+
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, "") ==
+                    this.pathname.replace(/^\//, "") &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length
+                        ? target
+                        : $("[name=" + this.hash.slice(1) + "]");
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $("html, body").animate(
+                            {
+                                scrollTop: target.offset().top
+                            },
+                            1000,
+                            function () {
+                                // Callback after animation
+                                // Must change focus!
+                                var $target = $(target);
+                                $target.focus();
+                                if ($target.is(":focus")) {
+                                    // Checking if the target was focused
+                                    return false;
+                                } else {
+                                    $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+                                    $target.focus(); // Set focus again
+                                }
+                            }
+                        );
+                    }
+                }
+            });
+    </script>
+</body>
+
+</html>

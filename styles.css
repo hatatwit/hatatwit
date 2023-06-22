@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian&display=swap");
+@font-face {
+    font-family: Lamarkie;
+    src: url("Lamarkie.otf");
+}
+
+:root {
+  --body-font: 'Noto Serif Armenian', serif;
+  --heading-font: Lamarkie;
+  --subtitle-color: #5c5c5c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: var(--body-font);
+}
+
+p {
+  font-family: var(--body-font);
+}
+
+h1 {
+  font-size: 50px;
+  padding: 18px 0;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 9vw  !important;
+  }
+}
+
+/* HERO SECTION STYLES START */
+
+.hero-section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+}
+
+.hero-logo {
+  position: fixed;
+  margin: 2em;
+  color: white;
+  font-family: var(--heading-font);
+  font-style: 16px;
+  mix-blend-mode: difference;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hero-logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero-logo a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 0;
+  margin: 2em;
+  color: white;
+  z-index: 1;
+  cursor: pointer;
+  mix-blend-mode: difference;
+}
+
+.menu-toggle ion-icon {
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+}
+
+.overlay ion-icon {
+  position: absolute;
+  right: 0;
+  margin: 2em;
+  color: white;
+}
+
+.overlay ul {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+}
+
+.overlay ul li {
+  font-size: 84px;
+}
+
+.overlay ul li a {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-family: var(--heading-font);
+  text-transform: uppercase !important;
+  font-size: 3rem;
+}
+
+.overlay ul li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media (max-width: 900px) {
+  .overlay ul {
+    left: 50%;
+    top: 50%;
+  }
+  .overlay ul li a {
+    font-size: 10vw;
+  }
+}
+
+.media {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 2em;
+  z-index: 2;
+}
+
+.media ul {
+  list-style: none;
+}
+
+.media ul li {
+  padding: 10px 0;
+}
+
+.media ul li a {
+  color: white;
+}
+
+.view-photos {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 2em;
+  z-index: 2;
+}
+
+
+.view-photos ul li {
+  display: inline-block;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: rotate(-90deg);
+  color: white;
+  margin-top: 3rem;
+  font-size: 15px;
+
+}
+
+.view-photos ion-icon {
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 20px;
+}
+
+
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.hero-img img {
+  width: 100%;
+}
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  letter-spacing: 0.25rem;
+  word-spacing: 0.5em;
+}
+
+.hero-title h1 {
+  font-size: 10rem;
+  font-weight: lighter;
+  font-family: var(--heading-font);
+  text-transform: uppercase !important;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .hero-title .letter {
+    font-size: 24px !important;
+  }
+}
+
+.hero-title .letter {
+  display: inline-block;
+  opacity: 0;
+  font-size: 40px;
+  color: white;
+  font-family: var(--heading-font);
+  text-transform: uppercase !important;
+}
+
+/* HERO SECTION STYLES END */
+
+/* ABOUT SECTION STYLES START */
+.about-section, .work-section, .skills-section, .projects-section {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-section h3 {
+  font-family: Helvetica;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.about-link {
+  margin: 50px 0;
+}
+
+.about-link a {
+  color: black;
+  padding: 18px 36px;
+  border: 1px solid black;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.about-link a:hover {
+  text-decoration: none;
+  color: white;
+  background: black;
+}
+
+
+.skills-section {
+  background: #0f0f0f;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills-section h1,  .projects-section h1{
+  text-align: center;
+}
+
+.skills-section p{
+  font-family: Helvetica;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+  color: #fff;
+}
+
+.skills-section ul {
+  list-style: none;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.skills-lists {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.list {
+  padding-right: 2rem;
+  border-right: 2px solid #fff;
+}
+
+.skills-lists ul li {
+  line-height: 2;
+}
+
+.list:last-child {
+  border: none;
+}
+
+.skills-tables {
+  display: none;
+}
+
+.proficient, .intermediate, .good{
+  color: #fff;
+  transition: color 0.5s ease;
+}
+
+.proficient:hover {
+  color: green;
+}
+
+.intermediate:hover {
+  color: orange;
+}
+
+.good:hover {
+  color: yellow;
+}
+
+@media (max-width: 900px) {
+  .skills-lists {
+    display: none;
+  }
+  .skills-tables {
+    display: block;
+  }
+  .skills-tables table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .skills-tables th, .skills-tables td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid var(--subtitle-color);
+  }
+
+}
+
+/* ABOUT SECTION STYLES END */
+
+/* EXPERIENCE SECTION STYLES END */
+.job-list {
+  padding: 15px 0;
+}
+.work-section h5 {
+  font-size: 25px;
+  letter-spacing: 0.2rem;
+  font-family: var(--body-font);
+}
+.job-list p {
+  padding: 5px 0;
+  line-height: 1.6;
+  font-family: var(--body-font);
+}
+.location {
+  font-size: 16px;
+  color: var(--subtitle-color);
+  font-family: var(--body-font);
+}
+/* EXPERIENCE SECTION STYLES END */
+
+/* PROJECTS SECTION STYLES START */
+.project-section {
+  background: #0f0f0f;
+  padding-top: 120px;
+  overflow: hidden;
+}
+
+.project-section h1 {
+  color: #fff;
+}
+
+.project-heading p {
+  float: left;
+  font-family: Helvetica;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+  color: #fff;
+}
+
+.project-heading {
+  margin-bottom: 120px;
+}
+
+.project-section ion-icon {
+  color: white;
+  font-size: 148px;
+}
+
+
+.project-scroll {
+  display: flex;
+  overflow-x: scroll;
+  padding: 1rem;
+  margin: 0 -1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.project {
+  scroll-snap-align: center;
+  flex: 1 1 40vw;
+  display: flex;
+  flex-direction: column;
+  min-width: 40vw;
+  box-shadow: 0px 0 10px 1px rgba(255, 255, 255, 0.2);
+  margin: 3rem 0;
+}
+
+.project + .project {
+  margin-left: 1.5rem;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 410px;
+  opacity: 0.8;
+  filter: brightness(45%) grayscale(1);
+  transition: filter 1000ms;
+  object-fit: cover;
+}
+
+.project:hover .project-image img,
+.project:focus-within .project-image img {
+  filter: brightness(100%) grayscale(0);
+}
+
+.project-text {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-text p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-family: Helvetica;
+  color: #fff;
+}
+
+.project-title {
+  font-size: 1.2em;
+  margin: 0 0 0.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 18px 0;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  word-spacing: 0.5em;
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 900px) {
+  .project-title {
+    font-size: 4vw !important;
+    line-height: 2;
+  }
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.project-tags li {
+  margin-right: 1.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.project-links {
+  padding-top: 1em;
+  margin-top: auto;
+  color: #fff;
+}
+
+.project-links a {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  color: #fff;
+  transition: color 500ms;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-links a:hover,
+.project-links a:focus {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  cursor: pointer;
+  mix-blend-mode: color-dodge;
+}
+
+@media screen and (max-width: 900px) {
+  .project {
+    min-width: 75vw;
+  }
+}
+
+
+
+/* PROJECTS SECTION STYLES END */
+
+/* CONTACT SECTION STYLES START */
+.social-media {
+  padding: 0 0;
+  margin-top: 120px;
+}
+
+.social-icons {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.social-icons ul {
+  margin: 80px 0 !important;
+  padding: 0 !important;
+}
+
+.social-icons ul li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 40px;
+}
+
+.social-icons ul li a {
+  color: black;
+  font-style: italic;
+  font-family: "Cormorant";
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #000;
+}
+
+/* CONTACT SECTION STYLES END */
+
