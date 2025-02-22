@@ -1,18 +1,36 @@
-<h1 align="left">💫 About Me:</h1>
+<img align="left" height="200" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWljY21qcGx0ZHZ5c2o0N2Nzdm11YXYwNXJrNnp2Y3Vxb3g4cjZybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/y1651PjhLNK9VBoF7y/giphy.gif"  />
+
+###
+
+<p align="center">I’m a frontend developer based in Ho Chi Minh City, passionate about building seamless UIs and bringing websites to life with rich features. I specialize in frontend technologies such as React.js, TypeScript, JavaScript, HTML, SASS, CSS, and REST APIs. I have experience in data visualization, building query builders, WYSIWYG editors, and CRUD applications. I’m currently seeking new opportunities to grow my skills and advance my career.</p>
 
 ###
 
 <br clear="both">
 
-<div align="right">
+<div align="center">
+  <a href="https://www.linkedin.com/in/hatatwit/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
+  </a>
+  <a href="mailto:hatatsg@outlook.com?subject=[GitHub]%20Hi%20there,%20I%20reached%20out%20to%20you%20from%20GitHub" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/microsoft-outlook/default.svg" width="52" height="40" alt="microsoft-outlook logo"  />
+  </a>
+  <a href="instagram.com/spunkie_thebun" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
+  </a>
+</div>
+
+###
+
+<br clear="both">
+
+<div align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=hatatwit.hatatwit&right_color=darkseagreen"  />
 </div>
 
 ###
 
-<p align="left">I’m a frontend developer based in Ho Chi Minh City, passionate about building seamless UIs and bringing websites to life with rich features. I specialize in frontend technologies such as React.js, TypeScript, JavaScript, HTML, SASS, CSS, and REST APIs. I have experience in data visualization, building query builders, WYSIWYG editors, and CRUD applications. I’m currently seeking new opportunities to grow my skills and advance my career.</p>
-
-###
+<br clear="both">
 
 <h2 align="left">💻 Tech Stack</h2>
 
@@ -89,20 +107,5 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tobiasmeyhoefer/tobiasmeyhoefer/output/github-snake.svg" />
   <img alt="github-snake" src="https://raw.githubusercontent.com/tobiasmeyhoefer/tobiasmeyhoefer/output/github-snake.svg" />
 </picture>
-
-###
-
-<h2 align="left">🌐 Socials</h2>
-
-###
-
-<div align="left">
-  <a href="https://www.linkedin.com/in/hatatwit/" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
-  </a>
-  <a href="mailto:hatatsg@outlook.com?subject=[GitHub]%20Hi%20there,%20I%20reached%20out%20to%20you%20from%20GitHub" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/microsoft-outlook/default.svg" width="52" height="40" alt="microsoft-outlook logo"  />
-  </a>
-</div>
 
 ###
