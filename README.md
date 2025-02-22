@@ -2,7 +2,11 @@
 
 ###
 
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=hatatwit.hatatwit&right_color=darkseagreen"  />
+<br clear="both">
+
+<div align="right">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=hatatwit.hatatwit&right_color=darkseagreen"  />
+</div>
 
 ###
 
