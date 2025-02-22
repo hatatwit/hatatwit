@@ -2,7 +2,7 @@
 
 ###
 
-<p align="center">I’m a frontend developer based in Ho Chi Minh City, passionate about building seamless UIs and bringing websites to life with rich features. I specialize in frontend technologies such as React.js, TypeScript, JavaScript, HTML, SASS, CSS, and REST APIs. I have experience in data visualization, building query builders, WYSIWYG editors, and CRUD applications. I’m currently seeking new opportunities to grow my skills and advance my career.</p>
+<p align="left">I’m a frontend developer based in Ho Chi Minh City, passionate about building seamless UIs and bringing websites to life with rich features. I specialize in frontend technologies such as React.js, TypeScript, JavaScript, HTML, SASS, CSS, and REST APIs. I have experience in data visualization, building query builders, WYSIWYG editors, and CRUD applications. I’m currently seeking new opportunities to grow my skills and advance my career.</p>
 
 ###
 
